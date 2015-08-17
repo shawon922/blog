@@ -64,6 +64,7 @@ class PostsController extends Controller
 
         $post->update($editedPost);
 
+        Session::flash('success', 'The post has been updated.');
         return redirect('posts');
     }
 
@@ -71,6 +72,7 @@ class PostsController extends Controller
     {
         $post = Post::find($id)->delete();
 
+        Session::flash('success', 'The post has been deleted.');
         return redirect('posts');
     }
 }
