@@ -16,7 +16,9 @@ class PostsController extends Controller
     public function index()
     {
     	$page_title = 'This is HomePage';
+
     	$posts = Post::latest('published_at')->published()->get();
+        $posts = Post::paginate(5);
 
     	//dd($posts);
     	return view('posts.index', compact('page_title', 'posts'));

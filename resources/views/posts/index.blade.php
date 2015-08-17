@@ -12,7 +12,9 @@
 	</div>
 
 	@if (Session::has('success'))
-		<div class="alert-success">
+		<div class="alert alert-success">
+	        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+
 	        <h2>{{ Session::get('success') }}</h2>
 	    </div>
 	@endif
@@ -43,6 +45,9 @@
 			</tr>
 		@endforeach
 	</table>
+	<div class="text-center">
+        {!! $posts->render() !!}
+    </div>
 
 @stop
 
