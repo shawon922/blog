@@ -7,9 +7,7 @@
 
 @section('content')
 
-	<div class="row jumbotron">
-
-	</div>
+	
 
 	@if (Session::has('success'))
 		<div class="alert alert-success">
