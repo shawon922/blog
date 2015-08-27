@@ -11,7 +11,7 @@
 |
 */
 
-Route::get('/', 'PostsController@index');
+Route::get('/', 'UsersController@home');
 
 /*Route::get('posts', 'PostsController@index');
 
@@ -29,7 +29,12 @@ Route::patch('posts/{id}/edit', 'PostsController@update');*/
 
 Route::resource('posts', 'PostsController');
 
-Route::controllers([
+/*Route::controllers([
 	'auth' => 'Auth\AuthController',
 	'password' => 'Auth\PasswordController'
-]);
+]);*/
+
+Route::get('/register', 'AuthController@getRegister');
+Route::post('/register', 'AuthController@postRegister');
+Route::get('/login', 'AuthController@getLogin');
+Route::post('/login', 'AuthController@postLogin');
