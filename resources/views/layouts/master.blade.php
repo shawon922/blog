@@ -37,7 +37,7 @@
                                     <li><a href="{{ url('/login') }}">Sign In</a></li>
                                 @else
                                     <li><a href="#">Welcome, {{ \Auth::user()->name }}</a></li>
-                                    <li><a href="{{ route('user.edit', \Auth::user()->id) }}">Profile</a></li>
+                                    <li><a href="{{ route('users.edit', \Auth::user()->id) }}">Profile</a></li>
                                     <li><a href="{{ url('/logout') }}">Sign Out</a></li>
                                 @endif
                             </ul>
