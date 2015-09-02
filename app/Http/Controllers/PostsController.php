@@ -13,6 +13,12 @@ use App\Post;
 
 class PostsController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth', ['except' => ['index']]);
+    }
+
+
     public function index()
     {
     	$page_title = 'This is HomePage';
